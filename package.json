@@ -1,6 +1,6 @@
 {
   "name": "@slatestudio/common-http",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HTTP server for common-service",
   "main": "index.js",
   "repository": {
@@ -16,12 +16,12 @@
   "author": "Alexander Kravets <alex@slatestudio.com>",
   "license": "ISC",
   "dependencies": {
-    "@slatestudio/common-service": "1.1.7",
+    "@slatestudio/common-service": "2.0.1",
     "bluebird": "^3.5.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "eslint": "^5.1.0",
+    "eslint": "^5.12.1",
     "mocha": "^5.2.0",
     "nyc": "^11.9.0"
   }
