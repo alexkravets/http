@@ -1,6 +1,6 @@
 {
   "name": "@kravc/common-http",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "HTTP server for common-service",
   "main": "index.js",
   "repository": {
@@ -16,7 +16,7 @@
   "author": "Alexander Kravets <a@kra.vc>",
   "license": "ISC",
   "dependencies": {
-    "@kravc/common-service": "3.8.0",
+    "@kravc/common-service": "3.8.1",
     "bluebird": "^3.7.2"
   },
   "devDependencies": {
