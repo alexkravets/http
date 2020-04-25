@@ -1,11 +1,11 @@
 {
-  "name": "@slatestudio/common-http",
-  "version": "0.1.1",
+  "name": "@kravc/common-http",
+  "version": "0.2.0",
   "description": "HTTP server for common-service",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/slate-studio/common-http.git"
+    "url": "http://github.com/alexkravets/common-http.git"
   },
   "directories": {
     "lib": "lib"
@@ -13,16 +13,16 @@
   "scripts": {
     "test": "eslint lib/ test/ && NODE_PATH=./ nyc --reporter text mocha --exit"
   },
-  "author": "Alexander Kravets <alex@slatestudio.com>",
+  "author": "Alexander Kravets <a@kra.vc>",
   "license": "ISC",
   "dependencies": {
-    "@slatestudio/common-service": "2.0.1",
-    "bluebird": "^3.5.3"
+    "@kravc/common-service": "3.8.0",
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^5.12.1",
-    "mocha": "^5.2.0",
-    "nyc": "^11.9.0"
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1"
   }
 }
