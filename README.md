@@ -1,8 +1,22 @@
-# Common Http
+# @kravc/http
 
-**HTTP Server**
- - Receives HTTP(s) requests
- - Reads stream into body string
- - Passes request to handler for execution
- - Gets string result and status code from handler
- - Sends response to client
+Minimal HTTP server for `node.js` web development.
+
+## API
+
+Install:
+
+```sh
+npm i --save @kravc/http
+```
+
+### Get started
+
+```js
+const { createServer } = require('@kravc/http')
+
+await createServer(() => ({
+  body:       JSON.stringify({ message: 'Hello, world!' }, null, 2),
+  statusCode: 200
+}))
+```
