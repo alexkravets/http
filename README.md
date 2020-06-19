@@ -21,6 +21,8 @@ await createServer(() => ({
 }))
 ```
 
+### Integration
+
 In case you have module that exports request handler method, e.g `./index.js`,
 add `start` script to `package.json`:
 
@@ -35,5 +37,13 @@ Specify custom module name or port to start server on with options:
 ```json
 "scripts": {
   "start": "http ./module.js 4000"
+}
+```
+
+Example of the npm start script with `nodemon` support:
+
+```json
+"scripts": {
+  "start": "NODE_PATH=./ nodemon -e js,yaml -w ./src --exec http"
 }
 ```
