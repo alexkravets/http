@@ -1,7 +1,7 @@
 {
   "name": "@kravc/http",
-  "version": "0.3.0",
-  "description": "Minimal HTTP server for node.js web development",
+  "version": "0.4.0",
+  "description": "Minimal node.js HTTP server for web development",
   "main": "src/index.js",
   "repository": {
     "type": "git",
@@ -14,6 +14,14 @@
   "scripts": {
     "test": "eslint src/ test/ && NODE_PATH=./ nyc mocha --exit"
   },
+  "bin": {
+    "http": "bin/http.js"
+  },
+  "files": [
+    "README.md",
+    "bin",
+    "src"
+  ],
   "author": "Alexander Kravets <a@kra.vc>",
   "license": "ISC",
   "devDependencies": {
