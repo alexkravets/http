@@ -1,6 +1,6 @@
 {
   "name": "@kravc/http",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Minimal node.js HTTP server for web development",
   "main": "src/index.js",
   "repository": {
@@ -8,11 +8,10 @@
     "url": "http://github.com/alexkravets/http.git"
   },
   "directories": {
-    "src": "src",
-    "test": "test"
+    "src": "src"
   },
   "scripts": {
-    "test": "eslint src/ test/ && NODE_PATH=./ nyc mocha --exit"
+    "test": "eslint src/ bin/ && NODE_PATH=./ nyc mocha \"./src/**/*.spec.js\" --exit"
   },
   "bin": {
     "http": "bin/http.js"
@@ -27,8 +26,12 @@
   "devDependencies": {
     "@kravc/request": "^1.0.0",
     "chai": "^4.2.0",
-    "eslint": "^7.2.0",
-    "mocha": "^7.1.2",
+    "eslint": "^7.13.0",
+    "mocha": "^8.2.1",
     "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "include": "src",
+    "exclude": "**/*.spec.js"
   }
 }
