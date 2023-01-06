@@ -1,6 +1,6 @@
 {
   "name": "@kravc/http",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Minimal node.js HTTP server for web development",
   "main": "src/index.js",
   "repository": {
