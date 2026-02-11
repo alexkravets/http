@@ -1,14 +1,12 @@
 'use strict'
 
-const http      = require('http')
-const readBody  = require('./readBody')
-const { parse } = require('url')
-
+const http = require('http')
+const readBody = require('./readBody')
 const createServer = (handler, port = 3000) => {
   const server = http.createServer((req, res) => {
     const { url } = req
 
-    req.path = parse(url).pathname
+    req.path = new URL(url, 'http://localhost').pathname
 
     readBody(req, async (error) => {
       let body

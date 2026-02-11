@@ -40,6 +40,12 @@ Specify custom module name or port to start server on with options:
 }
 ```
 
+TypeScript is supported—use `index.ts` or any `.ts` file. Install `ts-node` in your project:
+
+```sh
+npm i ts-node
+```
+
 Example of the npm start script with `nodemon` support:
 
 ```json

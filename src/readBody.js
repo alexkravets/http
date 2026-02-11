@@ -2,9 +2,11 @@
 
 const readBody = (req, callback) => {
   // NOTE: https://github.com/stream-utils/raw-body/blob/master/index.js
-  if (req.method === 'GET') { return callback() }
+  if (req.method === 'GET') {
+    return callback()
+  }
 
-  let buffer     = []
+  let buffer = []
   let isComplete = false
 
   const onData = chunk => {
@@ -27,8 +29,8 @@ const readBody = (req, callback) => {
   const onAborted = () => {
     if (isComplete) { return }
     const error = {
-      status:     'Bad Request',
-      message:    'Request aborted',
+      status: 'Bad Request',
+      message: 'Request aborted',
       statusCode: 400
     }
 
@@ -38,8 +40,8 @@ const readBody = (req, callback) => {
   const onError = err => {
     if (isComplete) { return }
     const error = {
-      status:     'Bad Request',
-      message:    err.message,
+      status: 'Bad Request',
+      message: err.message,
       statusCode: 400
     }
 
